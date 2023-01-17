@@ -11,6 +11,7 @@ export const StyledLogo = styled.h1`
 export const StyledForm = styled.form`
     margin-top: 28px;
     input {
+        font-family: 'Raleway',sans-serif;
         margin-bottom: 13px;
         width: 100%;
         height: 58px;
@@ -37,6 +38,7 @@ export const StyledForm = styled.form`
 `
 
 export const StyledLink = styled(Link)`
+    font-family: 'Raleway',sans-serif;
     font-size: 15px;
     font-weight: 700;
     color: #FFFFFF;
@@ -46,8 +48,15 @@ export const StyledLink = styled(Link)`
 `
 
 export const StyledH2 = styled.h2`
+    font-family: 'Raleway',sans-serif;
     font-size: 26px;
     font-weight: 700;
     color: #FFFFFF;
     line-height: 30px;
 ` 
+
+export const StyledTransferPages = styled.div`
+background-color: #8C11BE;
+height: 100vh;
+padding: 25px;
+`
