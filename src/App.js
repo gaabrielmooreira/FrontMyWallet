@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginPage from './Pages/LoginPage'
-import RegisterPage from './Pages/RegisterPage'
-import NewEntryPage from './Pages/NewEntryPage'
-import NewLeavePage from './Pages/NewLeavePage'
-import HomePage from './Pages/HomePage'
+import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
+import NewEntryPage from './pages/NewEntryPage'
+import NewLeavePage from './pages/NewLeavePage'
+import HomePage from './pages/HomePage'
 
 export default function App() {
     return (
