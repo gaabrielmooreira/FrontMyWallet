@@ -1,18 +1,18 @@
 import styled from "styled-components";
-import FormRegister from "../components/FormRegister";
+import FormSignUp from "../components/FormSignUp";
 import { StyledLogo, StyledLink } from "../styles/Styled";
 
-export default function RegisterPage(){
+export default function SignUpPage(){
     return (
-        <StyledRegisterPage>
+        <StyledSignUpPage>
             <StyledLogo>MyWallet</StyledLogo>
-            <FormRegister/>
+            <FormSignUp/>
             <StyledLink to="/">Já tem uma conta? Entre agora!</StyledLink>
-        </StyledRegisterPage>
+        </StyledSignUpPage>
     )
 }
 
-const StyledRegisterPage = styled.div`
+const StyledSignUpPage = styled.div`
     padding: 0px 25px;
     height: 100vh;
     background-color: #8C11BE;

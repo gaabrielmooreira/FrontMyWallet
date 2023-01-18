@@ -1,5 +1,5 @@
 import { StyledForm } from "../styles/Styled"
-export default function FormRegister() {
+export default function FormSignUp() {
     return (
         <StyledForm>
             <input type="text" placeholder="Nome" />
