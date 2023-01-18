@@ -53,10 +53,10 @@ export const StyledH2 = styled.h2`
     font-weight: 700;
     color: #FFFFFF;
     line-height: 30px;
-` 
+`
 
 export const StyledTransferPages = styled.div`
-background-color: #8C11BE;
-height: 100vh;
-padding: 25px;
+    background-color: #8C11BE;
+    height: 100vh;
+    padding: 25px;
 `

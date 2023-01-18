@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import NewEntryPage from './pages/NewEntryPage'
-import NewLeavePage from './pages/NewLeavePage'
 import HomePage from './pages/HomePage'
+import NewExitPage from "./pages/NewExitPage";
 
 export default function App() {
     return (
@@ -13,7 +13,7 @@ export default function App() {
                 <Route path="/cadastro" element={<RegisterPage />} />
                 <Route path="/home" element={<HomePage />} />
                 <Route path="/nova-entrada" element={<NewEntryPage />} />
-                <Route path="/nova-saida" element={<NewLeavePage />} />
+                <Route path="/nova-saida" element={<NewExitPage />} />
             </Routes>
         </BrowserRouter>
     )

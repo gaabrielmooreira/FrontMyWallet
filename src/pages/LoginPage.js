@@ -1,15 +1,12 @@
 import styled from "styled-components"
-import { StyledForm, StyledLink, StyledLogo } from "../styles/Styled"
+import FormLogin from "../components/FormLogin"
+import { StyledLink, StyledLogo } from "../styles/Styled"
 
-export default function LoginPage(){
+export default function LoginPage() {
     return (
         <StyledLoginPage>
             <StyledLogo>MyWallet</StyledLogo>
-            <StyledForm>
-                <input placeholder="E-mail"/>
-                <input placeholder="Senha"/>
-                <button>Entrar</button>
-            </StyledForm>
+            <FormLogin />
             <StyledLink to="/cadastro">Primeira vez? Cadastre-se!</StyledLink>
         </StyledLoginPage>
     )

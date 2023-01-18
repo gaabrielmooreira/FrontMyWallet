@@ -1,19 +1,12 @@
-
-
 import styled from "styled-components";
-import { StyledLogo,StyledForm, StyledLink } from "../styles/Styled";
+import FormRegister from "../components/FormRegister";
+import { StyledLogo, StyledLink } from "../styles/Styled";
 
 export default function RegisterPage(){
     return (
         <StyledRegisterPage>
             <StyledLogo>MyWallet</StyledLogo>
-            <StyledForm>
-                <input type="text" placeholder="Nome"/>
-                <input type="email" placeholder="Email"/>
-                <input type="password" placeholder="Senha"/>
-                <input type="password" placeholder="Confirme a senha"/>
-                <button>Cadastrar</button>
-            </StyledForm>
+            <FormRegister/>
             <StyledLink to="/">Já tem uma conta? Entre agora!</StyledLink>
         </StyledRegisterPage>
     )
