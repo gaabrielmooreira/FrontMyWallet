@@ -3,6 +3,7 @@ import { useContext } from "react";
 import AuthContext from "../contexts/AuthContext.js";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 export default function FormNewExit() {
     const [value, setValue] = useState("");
