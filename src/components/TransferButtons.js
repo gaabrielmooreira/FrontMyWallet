@@ -1,14 +1,15 @@
 import styled from "styled-components"
 import { HiOutlinePlusCircle, HiOutlineMinusCircle } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function TransferButtons() {
     return (
         <StyledTransferButtons>
-            <StyledTransferButton>
+            <StyledTransferButton to="/nova-entrada">
                 <StyledIconPlus />
                 <p>Nova<br /> entrada</p>
             </StyledTransferButton>
-            <StyledTransferButton>
+            <StyledTransferButton to="/nova-saida">
                 <StyledIconMinus />
                 <p>Nova<br /> saída</p>
             </StyledTransferButton>
@@ -21,7 +22,7 @@ const StyledTransferButtons = styled.div`
     justify-content: space-between;
 `
 
-const StyledTransferButton = styled.button`
+const StyledTransferButton = styled(Link)`
     padding: 10px;
     width: 48%;
     height: 114px;
@@ -35,6 +36,7 @@ const StyledTransferButton = styled.button`
     text-align: justify;
     border: none;
     border-radius: 5px;
+    text-decoration: none;
 `
 
 const StyledIconPlus = styled(HiOutlinePlusCircle)`

@@ -1,10 +1,20 @@
 import styled from "styled-components"
-import { StyledH2 } from "../styles/Styled.js"
+import { StyledH2, StyledLinkNoAuthorizate } from "../styles/Styled.js"
+import { useContext } from "react";
+import AuthContext from "../contexts/AuthContext.js";
 import { RiLogoutBoxRLine } from "react-icons/ri"
 import TransferButtons from "../components/TransferButtons.js";
 import TransferHistory from "../components/TransferHistory.js";
 
 export default function HomePage() {
+    
+    const { token } = useContext(AuthContext);
+    if (!token) {
+        return <StyledLinkNoAuthorizate to="/">
+            <button>Faça Login</button>
+        </StyledLinkNoAuthorizate>;
+    }
+
     return (
         <StyledHomePage>
             <StyledHeader>

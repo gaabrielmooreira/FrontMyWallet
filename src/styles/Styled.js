@@ -60,3 +60,23 @@ export const StyledTransferPages = styled.div`
     height: 100vh;
     padding: 25px;
 `
+
+export const StyledLinkNoAuthorizate = styled(Link)`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8C11BE;
+    text-decoration: none;
+    button{
+        width: 50%;
+        height: 100px;
+        border: none;
+        border-radius: 5px;
+        background-color: #A328D6;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 700;
+    }
+`
