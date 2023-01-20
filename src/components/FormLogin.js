@@ -16,8 +16,8 @@ export default function FormLogin() {
         e.preventDefault();
         const body = { email, password }
         try {
-            const token = await axios.post(`${process.env.REACT_APP_API_URL}`, body)
-            setToken(token);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}`, body)
+            setToken(response.data);
         } catch (err) {
             return console.log(err);
         }
