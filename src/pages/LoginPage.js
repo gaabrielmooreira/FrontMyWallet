@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import FormLogin from "../components/FormLogin"
-import { StyledLink, StyledLogo } from "../styles/Styled"
+import FormLogin from "../components/FormLogin.js"
+import { StyledLink, StyledLogo } from "../styles/Styled.js"
 
 export default function LoginPage() {
     return (

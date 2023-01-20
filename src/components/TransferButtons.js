@@ -23,7 +23,7 @@ const StyledTransferButtons = styled.div`
 
 const StyledTransferButton = styled.button`
     padding: 10px;
-    width: 155px;
+    width: 48%;
     height: 114px;
     display: flex;
     flex-direction: column;

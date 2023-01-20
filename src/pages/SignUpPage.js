@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import FormSignUp from "../components/FormSignUp";
-import { StyledLogo, StyledLink } from "../styles/Styled";
+import FormSignUp from "../components/FormSignUp.js";
+import { StyledLogo, StyledLink } from "../styles/Styled.js";
 
 export default function SignUpPage(){
     return (

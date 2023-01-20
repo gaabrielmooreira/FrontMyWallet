@@ -1,5 +1,5 @@
-import FormNewExit from "../components/FormNewExit"
-import { StyledH2, StyledTransferPages } from "../styles/Styled"
+import FormNewExit from "../components/FormNewExit.js"
+import { StyledH2, StyledTransferPages } from "../styles/Styled.js"
 
 export default function NewExitPage() {
     return (

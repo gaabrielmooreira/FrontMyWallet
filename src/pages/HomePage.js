@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { StyledH2 } from "../styles/Styled"
+import { StyledH2 } from "../styles/Styled.js"
 import { RiLogoutBoxRLine } from "react-icons/ri"
-import TransferButtons from "../components/TransferButtons";
-import TransferHistory from "../components/TransferHistory";
+import TransferButtons from "../components/TransferButtons.js";
+import TransferHistory from "../components/TransferHistory.js";
 
 export default function HomePage() {
     return (

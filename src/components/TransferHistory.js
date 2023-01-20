@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Transfer from "./Transfer";
+import Transfer from "./Transfer.js";
 
 export default function TransferHistory() {
     const dataTransfer = [];

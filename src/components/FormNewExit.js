@@ -1,4 +1,4 @@
-import { StyledForm } from "../styles/Styled"
+import { StyledForm } from "../styles/Styled.js"
 export default function FormNewExit() {
     return (
         <StyledForm>

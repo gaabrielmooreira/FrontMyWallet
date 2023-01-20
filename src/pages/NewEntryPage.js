@@ -1,5 +1,5 @@
-import FormNewEntry from "../components/FormNewEntry"
-import { StyledH2, StyledTransferPages } from "../styles/Styled"
+import FormNewEntry from "../components/FormNewEntry.js"
+import { StyledH2, StyledTransferPages } from "../styles/Styled.js"
 
 export default function NewEntryPage(){
     return (
