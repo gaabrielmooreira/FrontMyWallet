@@ -1,15 +1,20 @@
 import styled from "styled-components"
 import Transfer from "./Transfer.js";
 
-export default function TransferHistory() {
-    const dataTransfer = [];
+export default function TransferHistory({userTransfers,saldo}) {
     return (
-        <StyledTransferHistory noHistory={dataTransfer === undefined ? true:false}>
+        <StyledTransferHistory noHistory={userTransfers ? false:true}>
             {
-                dataTransfer === undefined ?
-                    <StyledTransfer>
-                        <Transfer />
-                    </StyledTransfer>:
+                userTransfers ?
+                    <>  
+                        <div>
+                        {userTransfers?.map( (userTransfer) => <Transfer userTransfer={userTransfer} />)}
+                        </div>
+                        <StyledSaldo>
+                            <p>SALDO</p>
+                            <p saldo={saldo}>{saldo}</p>
+                        </StyledSaldo>
+                    </>:
                     <p>Não há registros de<br />entrada ou saída</p>
             }
         </StyledTransferHistory>
@@ -18,9 +23,10 @@ export default function TransferHistory() {
 
 const StyledTransferHistory = styled.div`
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: ${props => props.noHistory ? "flex-start": "center"};;
-    align-items: ${props => props.noHistory ? "flex-start": "center"};
+    justify-content: ${props => props.noHistory ? "center": "space-between"};;
+    align-items: ${props => props.noHistory ? "center": "flex-start"};
     color: #868686;
     flex-direction: column;
     background-color: #FFFFFF;
@@ -29,11 +35,22 @@ const StyledTransferHistory = styled.div`
     text-align: center;
     border-radius: 5px;
     margin-bottom: 13px;
+    padding: 20px;
+    div {
+        width: 100%;
+    }
 `
 
-const StyledTransfer = styled.div`
-    width: 100%;
-    padding: 20px;
+const StyledSaldo = styled.div`
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    p:nth-child(1){
+        font-weight: 700;
+        color: #000000;
+    }
+    p:last-child{
+        font-weight: 400;
+        color: ${props => props.saldo > 0 ? "#03AC00":"#C70000"};
+    }
 `

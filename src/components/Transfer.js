@@ -1,17 +1,27 @@
 import styled from "styled-components"
 
-export default function Transfer() {
+export default function Transfer({userTransfer}) {
+    const {value, descripition, type} = userTransfer;
     return (
-        <>
+        <StyledTransfer>
             <StyledDate>30/11</StyledDate>
-            <StyledTransferDescription isEntry={true}>
-                <p>Almoço mãe</p>
-                <span>39,90</span>
+            <StyledTransferDescription type={type}>
+                <p>{descripition}</p>
+                <span>{value}</span>
             </StyledTransferDescription>
-        </>
+        </StyledTransfer>
     )
 }
 
+
+const StyledTransfer = styled.div`
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`
 
 const StyledDate = styled.p`
     width: 20%;
@@ -30,6 +40,6 @@ const StyledTransferDescription = styled.div`
         color: #000000;
     }
     span {
-        color: ${props => props.isEntry ? "#03AC00" : "#C70000"};
+        color: ${props => props.type === "entry" ? "#03AC00" : "#C70000"};
     }
 `
