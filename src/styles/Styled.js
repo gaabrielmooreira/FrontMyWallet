@@ -10,6 +10,7 @@ export const StyledLogo = styled.h1`
 
 export const StyledForm = styled.form`
     margin-top: 28px;
+    max-width: 500px;
     input {
         font-family: 'Raleway',sans-serif;
         margin-bottom: 13px;
@@ -34,6 +35,9 @@ export const StyledForm = styled.form`
         color: #FFFFFF;
         font-size: 20px;
         font-weight: 700;
+        :hover{
+            cursor: pointer;
+        }
     }
 `
 
