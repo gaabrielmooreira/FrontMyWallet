@@ -10,9 +10,9 @@ export default function TransferHistory({userTransfers,saldo}) {
                         <div>
                         {userTransfers?.map( (userTransfer) => <Transfer userTransfer={userTransfer} />)}
                         </div>
-                        <StyledSaldo>
+                        <StyledSaldo saldo={saldo}>
                             <p>SALDO</p>
-                            <p saldo={saldo}>{saldo}</p>
+                            <p>{saldo}</p>
                         </StyledSaldo>
                     </>:
                     <p>Não há registros de<br />entrada ou saída</p>
@@ -51,6 +51,6 @@ const StyledSaldo = styled.div`
     }
     p:last-child{
         font-weight: 400;
-        color: ${props => props.saldo > 0 ? "#03AC00":"#C70000"};
+        color: ${props => (props.saldo >= 0) ? "#03AC00":"#C70000"};
     }
 `

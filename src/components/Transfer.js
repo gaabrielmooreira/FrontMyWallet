@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
 export default function Transfer({userTransfer}) {
-    const {value, descripition, type} = userTransfer;
+    const {value, description, type} = userTransfer;
     return (
         <StyledTransfer>
             <StyledDate>30/11</StyledDate>
             <StyledTransferDescription type={type}>
-                <p>{descripition}</p>
+                <p>{description}</p>
                 <span>{value}</span>
             </StyledTransferDescription>
         </StyledTransfer>
