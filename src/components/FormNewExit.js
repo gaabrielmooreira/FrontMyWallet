@@ -15,12 +15,16 @@ export default function FormNewExit() {
 
     async function saveExit(event) {
         event.preventDefault();
-        const headers = {
-            Authorization: `Bearer ${token}`
+
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
         }
         const body = { value, description };
+
         try {
-            await axios.post(`${process.env.REACT_APP_API_URL}/nova-entrada`, body, headers);
+            await axios.post(`${process.env.REACT_APP_API_URL}/nova-saida`, body, config);
         } catch (err) {
             return console.log(err);
         }
