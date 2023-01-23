@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
 export default function Transfer({userTransfer}) {
-    const {value, description, type} = userTransfer;
+    const {value, description, type, date} = userTransfer;
     return (
         <StyledTransfer>
-            <StyledDate>30/11</StyledDate>
+            <StyledDate>{date}</StyledDate>
             <StyledTransferDescription type={type}>
                 <p>{description}</p>
-                <span>{value}</span>
+                <span>{value.toFixed(2).replace(".",",")}</span>
             </StyledTransferDescription>
         </StyledTransfer>
     )
@@ -19,7 +19,7 @@ const StyledTransfer = styled.div`
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 `
 
@@ -28,6 +28,7 @@ const StyledDate = styled.p`
     color: #C6C6C6;
     font-weight: 400;
     font-size: 16px;
+    text-align: start;
 `
 
 const StyledTransferDescription = styled.div`
