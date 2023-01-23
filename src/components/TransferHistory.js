@@ -12,7 +12,7 @@ export default function TransferHistory({userTransfers,saldo}) {
                         </div>
                         <StyledSaldo saldo={saldo}>
                             <p>SALDO</p>
-                            <p>{saldo}</p>
+                            <p>{saldo.toFixed(2).replace(".",",")}</p>
                         </StyledSaldo>
                     </>:
                     <p>Não há registros de<br />entrada ou saída</p>
