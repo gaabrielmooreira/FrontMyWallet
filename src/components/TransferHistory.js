@@ -1,14 +1,21 @@
 import styled from "styled-components"
 import Transfer from "./Transfer.js";
 
-export default function TransferHistory({userTransfers,saldo}) {
+export default function TransferHistory({transferModify,setTransferModify,userTransfers,saldo}) {
     return (
         <StyledTransferHistory noHistory={userTransfers ? false:true}>
             {
                 userTransfers ?
                     <>  
                         <div>
-                        {userTransfers?.map( (userTransfer) => <Transfer key={userTransfer._id} userTransfer={userTransfer} />)}
+                        {userTransfers?.map( 
+                                (userTransfer) => <Transfer 
+                                    key={userTransfer._id} 
+                                    userTransfer={userTransfer}
+                                    setTransferModify={setTransferModify}
+                                    transferModify={transferModify}
+                                />)
+                        }
                         </div>
                         <StyledSaldo saldo={saldo}>
                             <p>SALDO</p>

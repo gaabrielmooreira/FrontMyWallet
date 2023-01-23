@@ -12,29 +12,30 @@ export default function HomePage() {
     const [name, setName] = useState("Fulano");
     const [userTransfers, setUserTransfers] = useState([]);
     const [saldo, setSaldo] = useState(0);
+    const [transferModify, setTransferModify] = useState(false);
 
     const navigate = useNavigate();
     const { token, setToken } = useContext(AuthContext);
 
-    useEffect( () => {
+    useEffect(() => {
         const config = {
-            headers:{
+            headers: {
                 Authorization: `Bearer ${token}`
             }
         }
-        async function apiGetHome(){
-            try{
+        async function apiGetHome() {
+            try {
                 const response = await axios.get(`${process.env.REACT_APP_API_URL}/home`, config);
                 setName(response.data.name);
                 const transfers = response.data.userTransfers;
                 setUserTransfers(transfers);
                 setSaldo(response.data.saldo);
-            } catch (err){
+            } catch (err) {
                 console.log(err);
             }
         }
         apiGetHome();
-    }, []);
+    }, [transferModify]);
 
     if (!token) {
         return <StyledLinkNoAuthorizate to="/">
@@ -46,7 +47,7 @@ export default function HomePage() {
         setToken("");
         navigate("/");
     }
-    
+
     return (
         <StyledHomePage>
             <StyledHeader>
@@ -54,7 +55,7 @@ export default function HomePage() {
                 <StyledIconLogOut onClick={logout} />
             </StyledHeader>
 
-            <TransferHistory userTransfers={userTransfers} saldo={saldo}/>
+            <TransferHistory transferModify={transferModify} setTransferModify={setTransferModify} userTransfers={userTransfers} saldo={saldo} />
 
             <TransferButtons />
         </StyledHomePage>
