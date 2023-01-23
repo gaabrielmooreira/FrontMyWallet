@@ -8,7 +8,7 @@ export default function TransferHistory({userTransfers,saldo}) {
                 userTransfers ?
                     <>  
                         <div>
-                        {userTransfers?.map( (userTransfer) => <Transfer userTransfer={userTransfer} />)}
+                        {userTransfers?.map( (userTransfer) => <Transfer key={userTransfer._id} userTransfer={userTransfer} />)}
                         </div>
                         <StyledSaldo saldo={saldo}>
                             <p>SALDO</p>
