@@ -19,15 +19,16 @@ export default function FormNewEntry() {
                 Authorization: `Bearer ${token}`
             }
         }
+        
+        const valueNumber =  Number(value.replace(",","."));
 
-        const body = { value: Number(value.replace(",", ".")), description, type: "entry"};
+        const body = { value: valueNumber, description, type: "entry"};
 
         try {
             await axios.post(`${process.env.REACT_APP_API_URL}/nova-entrada`, body, config);
         } catch (err) {
             return console.log(err);
         }
-        
         navigate("/home");
     }
 
