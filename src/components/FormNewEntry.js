@@ -13,17 +13,21 @@ export default function FormNewEntry() {
 
     async function saveEntry(event) {
         event.preventDefault();
+
         const config = {
             headers: {
                 Authorization: `Bearer ${token}`
             }
         }
-        const body = { value, description };
+
+        const body = { value: Number(value.replace(",", ".")), description, type: "entry"};
+
         try {
             await axios.post(`${process.env.REACT_APP_API_URL}/nova-entrada`, body, config);
         } catch (err) {
             return console.log(err);
         }
+        
         navigate("/home");
     }
 

@@ -21,13 +21,14 @@ export default function FormNewExit() {
                 Authorization: `Bearer ${token}`
             }
         }
-        const body = { value, description };
+        const body = { value: Number(value.replace(",",".")), description, type: "exit"};
 
         try {
             await axios.post(`${process.env.REACT_APP_API_URL}/nova-saida`, body, config);
         } catch (err) {
             return console.log(err);
         }
+        
         navigate("/home");
     }
 
